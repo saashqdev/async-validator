@@ -1,8 +1,8 @@
-var path = require('path');  //加载nodejs的路径处理模块
+var path = require('path'); //Load nodejs path processing module
 module.exports = {
     entry: './index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),        //__dirname是一个nodejs变量，表示当前js文件所在的目录
+        path: path.resolve(__dirname, 'dist'), //__dirname is a nodejs variable, indicating the directory where the current js file is located
         filename: 'bundle.js',
         library: {
             root: 'AsyncValidator',
@@ -14,7 +14,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,    //配置文件目录下的es6文件夹作为js源代码文件夹
+                test: /\.js$/, //The es6 folder in the configuration file directory is used as the js source code folder
                 loader: 'babel-loader' ,
             }
         ]
